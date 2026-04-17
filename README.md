@@ -47,13 +47,15 @@ Output: `dist/DiscordSonarEchoFix.exe`, self-contained, no .NET install needed o
 
 ## Signing
 
-Releases on GitHub are signed via [SignPath](https://signpath.io/) (free for OSS). Locally, you can sign with a self-signed cert for personal use:
+Releases on GitHub will be signed via the [SignPath Foundation](https://signpath.org) (free code signing for open-source projects) once the project's application is approved. Until then, the GitHub release exe is unsigned - SmartScreen will show a warning the first time you run it (click "More info" then "Run anyway").
+
+For local signing during development:
 
 ```
 .\scripts\sign-local.ps1
 ```
 
-This generates a code-signing cert in your user store, signs the exe in `dist/`, and installs the cert as a trusted publisher locally. Self-signed signatures don't help when sending to others - they'd see the same SmartScreen warning. For that, get the signed release from GitHub.
+This generates a self-signed code-signing cert in your user store, signs the exe in `dist/`, and installs the cert as a trusted publisher locally so the signature shows as Valid. Self-signed signatures don't help when sending the exe to others - they'd see the same warning.
 
 ## Credits
 
