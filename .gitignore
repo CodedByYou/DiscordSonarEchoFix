@@ -1,0 +1,9 @@
+bin/
+obj/
+dist/
+*.user
+.vs/
+
+# self-signing artifacts — never commit
+code-signing.pfx
+*.pfx
