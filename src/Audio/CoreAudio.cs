@@ -159,23 +159,4 @@ internal static class CoreAudio
         [PreserveSig] int GetMute(out bool pbMute);
     }
 
-    [ComImport]
-    [Guid("641DD20B-4D41-49CC-ABA3-174B9477BB08")]
-    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public interface IAudioSessionNotification
-    {
-        [PreserveSig] int OnSessionCreated(IAudioSessionControl newSession);
-    }
-
-    [ComImport]
-    [Guid("7991EEC9-7E89-4D85-8390-6C703CEC60C0")]
-    [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-    public interface IMMNotificationClient
-    {
-        [PreserveSig] int OnDeviceStateChanged([MarshalAs(UnmanagedType.LPWStr)] string deviceId, uint dwNewState);
-        [PreserveSig] int OnDeviceAdded([MarshalAs(UnmanagedType.LPWStr)] string deviceId);
-        [PreserveSig] int OnDeviceRemoved([MarshalAs(UnmanagedType.LPWStr)] string deviceId);
-        [PreserveSig] int OnDefaultDeviceChanged(EDataFlow flow, ERole role, [MarshalAs(UnmanagedType.LPWStr)] string defaultDeviceId);
-        [PreserveSig] int OnPropertyValueChanged([MarshalAs(UnmanagedType.LPWStr)] string deviceId, PROPERTYKEY key);
-    }
 }

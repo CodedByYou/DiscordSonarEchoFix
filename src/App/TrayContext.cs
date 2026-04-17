@@ -70,7 +70,7 @@ internal sealed class TrayContext : ApplicationContext
         var miAbout = new ToolStripMenuItem("About", null, (_, _) =>
         {
             MessageBox.Show(
-                "Discord Sonar Echo Fix v1.0.0\n\n" +
+                "Discord Sonar Echo Fix v1.0.1\n\n" +
                 "Keeps Discord's per-app audio session muted on selected output\n" +
                 "endpoints so its voice audio isn't re-broadcast through Discord\n" +
                 "screenshare's system loopback. You still hear friends through\n" +
